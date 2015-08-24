@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="description" content="A HTML5 canvas demonstration, making a simple paint application.">
+    <meta name="author" content="Gregory Davis">
+    <link rel="author" href="http://www.gregorydavis.website">
+    
+	<title>Simple Draw 2.0</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/colorpicker.css">
+</head>
+    
+<body>
+    <noscript>
+         <h5 style="text-align: center; margin-top: 10%; font-size: 2em;">This application requires that JavaScript be enabled in order to run. Please contact your administrator or visit <a href="http://enable-javascript.com/" target="_blank">Enable-Javascript.com</a> to see how to enable JavaScript in your browser.</h5>
+    </noscript>
+    
+    <!-- HEADER SECTION -->
+    <div id="header" class="clearfix">
+        <div id="title">
+            <h1>
+                <span id="char1">S</span>
+                <span id="char2">i</span>
+                <span id="char3">m</span>
+                <span id="char4">p</span>
+                <span id="char5">l</span>
+                <span id="char6">e</span>
+                &nbsp;
+                
+                <span id="char7">D</span>
+                <span id="char8">r</span>
+                <span id="char9">a</span>
+                <span id="char10">w </span>
+                &nbsp;
+            </h1>
+            <div id="subTitle">
+                <h3>
+                    2.0
+                    &nbsp;
+                    -
+                    &nbsp;
+                    HTML5 Canvas demonstration.
+                </h3>
+            </div>
+        </div>
+        
+        <div id="navIcon"><h2>&#9776; Menu </h2></div>
+    </div>
+    
+    <!-- SLIDEOUT MENU/ TOOLS SECTION -->
+    <nav class="clearfix">
+        <div id="new" class="tooltip" title="New">
+             <img src="images/newCanvas.JPG" alt="Clear canvas" height="45" width="45"> 
+        </div>
+
+        <div id="save" class="tooltip" title="save">
+            <img src="images/save.png" alt="Save drawing" height="45" width="45"> 
+        </div>
+        
+        <div id="toolWidth" class="tooltip" title="Line Width">
+             <select>
+                  <option value="1" selected="selected">1 (px)</option>
+                  <option value="2">2 (px)</option>
+                  <option value="3">3 (px)</option>
+                 <option value="4">4 (px)</option>
+                  <option value="5">5 (px)</option>
+                  <option value="6">6 (px)</option>
+                 <option value="7">7 (px)</option>
+                  <option value="8">8 (px)</option>
+                 <option value="9">9 (px)</option>
+                  <option value="10">10 (px)</option>
+                 <option value="15">15 (px)</option>
+                  <option value="10">20 (px)</option>
+                  <option value="10">25 (px)</option>
+            </select> 
+        </div>
+
+        <div id="tools">
+            <div id="pen" class="tooltip selectedTool" title="Pen Tool">
+                 <img src="images/pen.png" alt="Pen Icon" height="45" width="45"> 
+            </div>
+
+            <div id="line" class="tooltip" title="Line Tool">
+                 <img src="images/line.png" alt="Line Icon" height="45" width="45"> 
+            </div>
+
+            <div id="eraser" class="tooltip" title="Eraser">
+                <img src="images/eraser.png" alt="Eraser Icon" height="45" width="45"> 
+            </div>
+
+            <div id="sprayPaint" class="tooltip" title="Spray Paint">
+                <img src="images/sprayPaint.png" alt="Spray can Icon" height="45" width="45"> 
+            </div>
+
+             <div id="shapes" class="tooltip" title="Shapes">
+                 <select>
+                      <option value="none" selected="selected">Select Shape</option>
+                      <option value="rectangle">Rectangle</option>
+                      <option value="circle">Circle</option>
+                     <option value="oval">Oval</option>
+                </select> 
+            </div>
+        </div>
+        
+        <div id="colorBtns">
+            <button id="editMode">Edit Color</button>
+            <button id="resetColors">Reset Colors</button>
+        </div>    
+
+        <div id="selectedColors">
+            <ul>
+                <li class="redDefault selected"></li>
+                <li class="blueDefault"></li>
+                <li class="yellowDefault"></li>
+                <li class="blackDefault"></li>
+                <li class="greenDefault"></li>
+                <li class="brownDefault"> </li>
+                <li class="orangeDefault"></li>
+                <li class="purpleDefault"> </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- CONTENT SECTION -->
+    <div id="content">
+        <canvas	id="drawSpace" width="1400" height="600"><p>Your current browser doesn't support canvas.</p><p>Some Supported browsers: <a href='http://www.google.com/chrome'>Google Chrome</a>, <a href='http://www.mozilla.org'>Firefox</a>, <a href='http://www.opera.com'>Opera</a>, <a href='http://www.apple.com/safari'>Safari</a>, and <a href='http://www.konqueror.org'>Konqueror</a>.</p></canvas>
+        <canvas	id="tmpdrawSpace" width="1400" height="600"></canvas>
+    </div> 
+    
+    <!-- FOOTER SECTION -->
+    <div id="footer">
+        <div id="footerText">
+            <h4>See more projects like this at my <a href="http://www.gregorydavis.website" target="_blank">Blog/Portfolio</a>.</h4>
+        </div>
+    </div>
+    
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/colorpicker.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

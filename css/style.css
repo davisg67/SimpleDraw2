@@ -1,0 +1,467 @@
+body {
+/*    background: linear-gradient(90deg, #384047, #63717e);*/
+background: #000000;
+	font-family: sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+h1, h3, h4, h5 {
+    color: white;
+    
+}
+
+/***** Title Animation *****/
+
+.Red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.Blue {
+    color: blue;
+}
+
+.Yellow {
+    color: yellow;   
+}
+
+.cyan {
+    color: cyan;   
+}
+
+
+/* HEADER */
+
+#header {
+    width: 100%;
+    height: 110px;
+    margin: 0;
+    background: #000000;
+}
+
+#title {
+    float: left;
+    height: 10px;
+    margin: 20px 0 0 40px;
+}
+
+#title h1, h3 {
+    display: inline;
+}
+
+#subTitle {
+    display: inline;
+}
+
+.menu-active {
+    left: 284px;
+}
+
+#navIcon {
+   position: absolute;
+   top: 50px;
+   left: 40px;
+   color: white; 
+   cursor: pointer;
+}
+
+#navIcon:hover {
+   color: gray; 
+}
+
+
+/* TOOLBAR */
+
+.selectedTool {
+   background-color: #F5DFC8; 
+   border-radius: 40%;
+}
+
+nav {
+    position: absolute;
+    top: 115px;
+    left: -320px;
+    display: block;
+    max-width: 320px;
+    height: 600px;
+    float: left;
+    background: #e7af76;
+    border-radius: 5px;
+    width: 100%;
+   -moz-transition: all 300ms;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+
+/*When class is active slide the menu out*/
+body.menu-active nav { 
+    left: 0; 
+}
+
+#new {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  box-sizing: border-box;
+  float: left; 
+  width: 70px;
+  height: 70px;
+  padding: 10px 0 0 10px;
+  margin: 30px 0 0 10px;
+  cursor: pointer;  
+}
+
+#save {
+  position: absolute;
+  top: 5px;
+  left: 110px;
+  box-sizing: border-box;
+  float: left; 
+  width: 70px;
+  height: 70px;
+  padding: 10px 0 0 10px;
+  margin: 30px 0 0 10px;
+  cursor: pointer;  
+}
+
+#pen {
+  position: absolute;
+  top: 120px;
+  left: 10px;  
+  box-sizing: border-box;
+  float: left; 
+  width: 70px;
+  height: 70px;
+  margin: 30px 0 0 20px;
+  padding: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+#line {
+   position: absolute;
+   top: 120px;
+   left: 110px;  
+   box-sizing: border-box;
+   float: left;  
+   width: 70px;
+   height: 70px;
+   margin: 30px 0 0 10px;
+   padding: 10px 0 0 10px;
+   cursor: pointer;
+}
+
+#eraser {
+   position: absolute;
+   top: 240px;
+   left: 10px; 
+   box-sizing: border-box;
+   float: left;  
+   width: 70px;
+   height: 70px;
+   margin: 30px 0 0 10px;
+   padding: 10px 0 0 10px;
+   cursor: pointer;   
+}
+
+#sprayPaint {
+   position: absolute;
+   top: 120px;
+   left: 200px;  
+   box-sizing: border-box;
+   float: left;  
+   width: 70px;
+   height: 70px;
+   margin: 30px 0 0 10px;
+   padding: 10px 0 0 10px;
+   cursor: pointer;
+}
+
+#toolWidth {
+  position: absolute;
+  top: 5px;
+  left: 200px;
+  box-sizing: border-box;
+  float: left;  
+  width: 82px;
+  height: 70px;
+  margin-top: 30px;
+  margin-left: 15px;
+  padding: 25px 0 0 5px;
+  cursor: pointer;  
+}
+
+#toolWidth select {
+    background: #e7af76;
+}
+
+
+button {
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 40px;
+    border: none;
+	border-radius: 5px;
+}
+
+
+#colorBtns {
+     position: absolute;
+     top: 380px;
+     left: 40px;  
+    box-sizing: border-box;
+    width: 250px;
+    height: 96px;
+}
+
+#resetColors {
+   background-color: #8B8680;
+   width: 108px;
+}
+
+#editMode {
+    background-color: #8B8680;
+    width: 108px;
+    margin-bottom: 5px;   
+}
+
+
+#selectedColors {
+    position: absolute;
+    top: 440px;
+    left: 40px;  
+    width: 260px;
+}
+
+.controls {
+    height: 96px;
+	border-radius: 5px;
+}
+
+ul {
+	list-style: none;
+	padding: 0 0 20px;
+}
+
+ul li {
+	display:inline-block;
+	height: 54px;
+	width: 54px;
+	border-radius: 60px;
+	cursor: pointer;
+	border: 0;
+	box-shadow: 0 3px 0 0 #222; 
+}
+
+#shapes{
+  position: absolute;
+  top: 240px;
+  left: 150px;  
+  box-sizing: border-box;
+  float: left;  
+  width: 120px;
+  height: 70px;
+  margin-top: 30px;
+  margin-left: 15px;
+  padding: 25px 0 0 10px;
+  cursor: pointer;  
+}
+
+#shapes select {
+    background: #e7af76;
+    width: 100px;
+}
+
+#showTitle {
+   box-sizing: border-box;
+   float: left;  
+   width: 70px;
+   height: 70px;
+   margin: 15px 0 0 10px;
+   padding: 10px 0 0 10px;
+   cursor: pointer; 
+   display: none;
+}
+
+#hideTitle {
+   box-sizing: border-box;
+   float: left;  
+   width: 70px;
+   height: 70px;
+   margin: 15px 0 0 10px;
+   padding: 10px 0 0 10px;
+   cursor: pointer;     
+}
+
+#titleDisplay {
+    margin: 20px 0 0 10px;
+    float: left;
+}
+
+.redDefault {
+    background: #FF0000; 
+}
+
+.blueDefault {
+    background: #0000FF;
+}
+
+.yellowDefault {
+    background: #FFFF00;
+}
+
+.blackDefault {
+    background: #000000;
+}
+
+.brownDefault {
+   background: #A52A2A;  
+}
+
+.greenDefault {
+    background: #008000;   
+}
+
+.orangeDefault {
+    background: #FFA500;   
+}
+
+.purpleDefault {
+    background: #800080;
+}
+
+.noColorDefault {
+   background: #3d464e;  
+}
+
+.selected {
+	border: 7px solid #fff;
+	width: 40px;
+	height: 40px;
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 1px #000;
+  -webkit-box-shadow: 3px 3px 5px 1px #000;
+  box-shadow:         3px 3px 5px 1px #000;
+}
+
+
+/* CONTENT */
+
+#content {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 600px;
+    
+    -moz-transition: all 300ms;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+
+/*When class is active slide canvas over */
+body.menu-active div#content { 
+    left: 320px; 
+}
+
+canvas {
+	border-radius: 5px;
+	box-shadow: 0 4px 0 0 #222;
+	cursor: url(../images/cursor.png), crosshair;
+}
+
+#drawSpace {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+#tmpdrawSpace {
+    position: absolute; 
+    top: 0;
+    left: 0;  
+}
+
+
+/* FOOTER */
+
+#footer {
+    clear: both;
+    position: absolute;
+    top: 720px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: #000;
+    text-align: center;
+}
+
+#footerText {
+    position: relative;
+    left: 0;
+    top: 5px;
+}
+
+
+/*************************
+Clearfix
+*************************/
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+/*************************
+ Media Queries
+*************************/
+
+@media (max-width: 750px) {
+   #subTitle {
+       display:none;
+   } 
+}
+
+@media (max-width: 360px) {
+    #title {
+      margin-left: 20px; 
+    }
+    
+     #footer {
+      height: 50px; 
+   }
+    
+     #footerText {
+       display: none; 
+    }
+}
+
+
+
+
+
+
+
